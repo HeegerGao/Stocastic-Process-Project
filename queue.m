@@ -7,8 +7,8 @@ clc
 %总仿真时间(变量)
 Total_time = 10;
 %到达率与服务率(变量，对于服务台增多的情况可成倍减小 lambda 的大小)
-lambda = 10;
-mu = 12;
+lambda = 40;
+mu = 13;
 s = 3;
 %平均到达时间与平均服务时间
 arr_mean = 1 / lambda;
@@ -105,8 +105,8 @@ hold on;
 stairs(0 : len_mem, [0, events(4, 1:len_mem)], '.-r');
 legend('到达时间', '离开时间');
 %设置横纵轴名称及字体大小
-% xlabel('时间/小时','FontSize',16);
-% ylabel('顾客数','FontSize',16);
+xlabel('第几个顾客','FontSize',16);
+ylabel('时间(小时)','FontSize',16);
 hold off;
 grid on;
 %绘制在仿真时间内，进入系统的所有顾客的停留时间和等待时间曲线图（plot, 绘制二维线性图）
@@ -114,6 +114,6 @@ figure;
 plot(1 : len_mem, events(3, 1:len_mem), 'r-*', 1 : len_mem, events(2, 1:len_mem) + events(3, 1:len_mem), 'k-');
 legend('等待时间', '停留时间');
 %设置横纵轴名称及字体大小
-% xlabel('顾客数','FontSize',16);
-% ylabel('时间/小时','FontSize',16);
+xlabel('第几个顾客','FontSize',16);
+ylabel('时间(小时)','FontSize',16);
 grid on;

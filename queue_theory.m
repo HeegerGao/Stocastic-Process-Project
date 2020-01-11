@@ -1,6 +1,8 @@
+lambda = 40;
+mu = 15;
 s = 3;
-mu = 12;
-lambda = 30;
+
+
 % 一般单位时间为小时
 ro = lambda / mu;
 ros = ro / s;
@@ -20,5 +22,6 @@ W = L / lambda;
 Wq = Lq / lambda;
 fprintf('排队等待的平均人数为%5.2f人\n', Lq)
 fprintf('系统内的平均人数为%5.2f人\n', L)
-fprintf('平均逗留时间为%5.2f分钟\n', W * 60)
 fprintf('平均等待时间为%5.2f分钟\n', Wq * 60)
+fprintf('平均逗留时间为%5.2f分钟\n', W * 60)
+

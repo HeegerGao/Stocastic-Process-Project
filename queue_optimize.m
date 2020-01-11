@@ -29,6 +29,8 @@ z = 10*c+50*L_list;
 figure;
 plot(c, z, 'r-*');
 legend('单位时间内总费用');
+xlabel('跑步机个数','FontSize',16);
+ylabel('单位时间的费用','FontSize',16);
 grid on;
 
 L_list
